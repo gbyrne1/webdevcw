@@ -331,7 +331,20 @@
         $(".tabs li").click(function(){
             $(".tabs li").removeClass("is-active");
             $(this).addClass("is-active");
-            
+
+            $(".panel-block").slideDown();
+            const tab=$(this).data.text().trim;
+            switch(tab){
+                case"Completed":
+                $(".panel-block").not(":checked").slideUp();
+                break;
+                case"Current":
+                $(".panel-block").not(":checked").slideUp();
+                break;
+
+                default:
+                    break;
+            }
         })
     })
 </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+        background-color: rgb(222, 238, 220);
+        }
+    h1{
+        display: block;
+            margin: 0;
+            padding: 5px 10px;
+            min-width: 100px;
+            font-size: large;
+    }
+    nav > div:hover, nav > div:focus-within {
+            background-color: lightgreen;
+            position:relative;
+        }
+    #navbar{
+        background-color: darkgreen;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    nav > div > div {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background-color: lightgreen;
+            width: 100%;
+            
+        }
+        nav a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: limegreen;
+        }
+
+        nav > div:hover > div, nav > div:focus-within {
+            display: flex;
+        }
+
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div>
+            <h1>File</h1>
+            <div>
+                <a href="">New</a>
+                <a href="">Open</a>
+                <a href="">Save</a>
+                <a href="">Print</a>
+                <a href="">Close</a>
+            </div>
+        </div>
+        <div>
+            <h1>Edit</h1>
+            <div>
+                <a href="">Undo</a>
+                <a href="">Redo</a>
+                <a href="">Cut</a>
+                <a href="">Copy</a>
+                <a href="">Paste</a>
+                <a href="">Delete</a>
+                <a href="">Select All</a>
+            </div>
+        </div>
+        <div>
+            <h1>View</h1>
+            <div>
+                <a href="">Zoom In</a>
+                <a href="">Zoom Out</a>
+                <a href="">Actual Size</a>
+                <a href="">Fit Page</a>
+                <a href="">Fit Width</a>
+                <a href="">Fit Height</a>
+                <a href="">Rotate Left</a>
+                <a href="">Rotate Right</a>
+                <a href="">Full Screen</a>
+            </div>
+        </div>
+    </nav>
+
+   <div style="background-color: white;border-left:10px solid green;padding:20px;margin:20px;">
+    <h1>
+        <b>Instructions</b>
+    </h1>
+    Recreate this page using <b><i>only CSS</i></b>. Do yourself a favor and 1) Do not view the source.
+     Figure it out yourself. 2) Do not search for the solution.
+      Learn CSS until you know enough to do this.
+   </div> 
+
+   <div style="background-color: white; border-left:10px solid yellow;
+   padding:20px; margin:20px;">
+    <h1>
+        <b>Extra Credit</b>
+    </h1>
+    Notice how the Edit menu (besides for not being bold) reacts to clicks. 
+    If you click the edit menu, it remains open until you click somewhere else.
+     (This you might need to search for)
+   </div> 
+
+</body>
+</html>

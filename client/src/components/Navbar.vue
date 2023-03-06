@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import LoginBadge from './Loginbadge.vue';
+
     const isMenuActive = ref(false);
     function toggleMenu() {
         isMenuActive.value = !isMenuActive.value;

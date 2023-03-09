@@ -1,13 +1,14 @@
-import {ref} from 'vue';
-import type { Product } from './products';
-const cart=ref(([]) as CartItem[]);
+import { ref } from "vue";
+import type { Product } from "./products";
 
-export function useCart(){
+const cart = ref([] as CartItem[]);
+
+export function useCart() {
     return cart;
 }
 
-export interface CartItem{
-    productid:number;
-    quanity:number;
-    product:Product;
+export interface CartItem {
+    productId: number;
+    product: Product;
+    quantity: number;
 }

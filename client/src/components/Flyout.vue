@@ -1,31 +1,28 @@
-
-
 <script setup lang="ts">
-
 </script>
 
 <template>
-    <div class="Flyout">
-        Flyout
-        <slot/>
+    <div class="flyout active">
+        <slot />
     </div>
 </template>
 
-<style scoped>
 
-.flyout {
-    position: fixed;
-    top: 52px;
-    right: -18rem;
-    width: 20rem;
-    height: clac(100vh-52px);
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 1rem;
-    transform: right 0.5s ease-in-out;
-}
-flyout:hover{
-    right:0;
-}
+<style scoped>
+    .flyout {
+        position: fixed;
+        top: 52px;
+        right: -18rem;
+        width: 20rem;
+        height: calc(100vh - 52px);
+        background-color: white;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        transition: right 0.5s ease-in-out;
+    }
+    .flyout.active {
+        right: 0;
+    }
+    .flyout:hover {
+        right: 0;
+    }
 </style>

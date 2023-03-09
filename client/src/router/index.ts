@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory, type NavigationGuardNext, type RouteLocationNormalized } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsVue from '@/views/products.vue'

@@ -1,23 +1,10 @@
 <script setup lang="ts">
-    import { useCart } from '@/model/cart';
-import { getProducts } from '@/model/products';
+    import { removefromcart, total, useCart } from '@/model/cart';
+
     const cart = useCart();
-    const products = getProducts();
-    cart.value.push({
-        product: products[3],
-        productId: 3,
-        quantity: 1,
-    })
-    cart.value.push({
-        product: products[13],
-        productId: 13,
-        quantity: 4,
-    })
-    cart.value.push({
-        product: products[23],
-        productId: 23,
-        quantity: 8,
-    })
+    
+
+   
 </script>
 
 <template>
@@ -25,21 +12,28 @@ import { getProducts } from '@/model/products';
         <h1 class="title">
             Cart
             <small>
-                $613
+                ${{total}}
                 ({{ cart.length }} items)
             </small>
         </h1>
         <p></p>
-        <div class="cart-item" v-for="item in cart">
+        <div class="cart-item" v-for="item,i in cart">
             <img :src="item.product.thumbnail" alt="product image" />
             <div>
                 <b>{{ item.product.title }}</b>
                 <p>
                     ${{ item.product.price }}
                     x {{ item.quantity }}
+                    <select v-model="item.quantity" class="quantity-dropdown">
+                        <option v-for="n in 10" :value="n">{{ n }}</option>
+                    </select>
                 </p>            
             </div>
-
+                <button class="button is-danger" @click="removefromcart(i)">
+               <span class="icon">
+                    <i class="fas fa-trash"></i>
+               </span>
+                </button>
         </div>
     </div>
 </template>

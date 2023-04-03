@@ -5,6 +5,7 @@ import {quantity } from '../model/cart';
 import LoginBadge from './Loginbadge.vue';
 import Flyout from './Flyout.vue';
 import Cart from './Cart.vue';
+import Notifications from './Notifications.vue';
 
     const isMenuActive = ref(false);
     const isCartActive = ref(false);
@@ -72,7 +73,7 @@ import Cart from './Cart.vue';
           </div>
       
           <div class="navbar-end">
-
+<Notifications />
             <div class="navbar-item">
                 <button class="button  is-primary" :class="{ 'is-active': isCartActive }" @click="isCartActive = !isCartActive">
                     <span class="icon">
